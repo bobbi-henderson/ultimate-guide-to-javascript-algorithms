@@ -5,7 +5,13 @@ e.g vowelsCounter('anehizxcv') // will return 3
 
 
 function vowelsCounter(text) {
-    // Code goes here
+    let vowels = text.match(/[aeiou]/gi);
+
+    if (vowels) {
+        return vowels.length
+    } else {
+        return 0
+    }
 }
 
 
