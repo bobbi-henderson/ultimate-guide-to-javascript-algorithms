@@ -8,7 +8,7 @@ don't. E.g
 
 
 function isAnagram(stringA, stringB) {
-    // Code goes here
+    return stringA.toLowerCase().split('').sort().join('') === stringB.toLowerCase().split('').sort().join('')
 }
 
 

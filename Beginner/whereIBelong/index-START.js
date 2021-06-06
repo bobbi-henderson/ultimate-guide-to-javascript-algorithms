@@ -10,8 +10,8 @@ than 1(index 0), but less than 2(index 1).
 
 
 function whereIBelong(arr, num) {
-   // Code goes here
-
+   arr.push(num)
+   return arr.sort((a,b)=>{return a-b}).indexOf(num)
 }
 
 

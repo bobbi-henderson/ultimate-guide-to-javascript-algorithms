@@ -5,7 +5,12 @@
 */
 
 function chunkArray(array, size) {
-    // Code goes here
+    let answer = []
+    let newArr = [...array]
+    while (newArr.length > 0){
+        answer.push(newArr.splice(0, size))
+    }
+    return answer
 }
 
 

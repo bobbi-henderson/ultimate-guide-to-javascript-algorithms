@@ -6,7 +6,26 @@ e.g maxRecurringChar('aabacada') // will return 'a'
 
 
 function maxRecurringChar(text) {
-    // Code goes here
+    let counter = {}
+    let maxValue = 0
+    let answer = ''
+
+    text.split('').forEach((x)=>{
+        if(counter[x]){
+            counter[x]++
+        } else {
+            counter[x] = 1
+        }
+    })
+
+    for(let char in counter) {
+        if(counter[char] > maxValue){
+            maxValue = counter[char] 
+            answer = char
+        }
+    }
+
+    return answer
 }
 
 

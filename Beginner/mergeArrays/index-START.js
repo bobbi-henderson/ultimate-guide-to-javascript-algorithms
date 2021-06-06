@@ -12,8 +12,7 @@ function mergeArrays(...arrays) {
         jointArray = [...jointArray, ...array]
     });
 
-    return [...new Set([...jointArray])]
-
+    return jointArray.filter((el,i) => jointArray.indexOf(el) === i)
     
 }
 
